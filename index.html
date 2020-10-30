@@ -21,7 +21,8 @@
         <div class="w-10/12 mx-auto flex justify-between">
             <div class="flex gap-6 items-center">
                 <img src="./public/assets/logo.svg" alt="" class="">
-                <span class="uppercase text-xs font-bold bg-ageeza-lighter border-2 px-2 py-1 rounded text-white">Admin
+                <span
+                    class="hidden md:block uppercase text-xs font-bold bg-ageeza-lighter border-2 px-2 py-1 rounded text-white">Admin
                     Console</span>
             </div>
             <div class="flex gap-6 items-center">
@@ -33,27 +34,106 @@
     </div>
 
     <!--Navigation + Filters-->
-    <div class="w-10/12 mx-auto my-8 flex justify-between">
-        <div class="flex items-center">
+    <div class="w-10/12 mx-auto my-8 flex flex-wrap gap-6 flex-col lg:flex-row justify-between">
+        <div class="flex items-center lg:mb-0">
             <!-- active tab has a blue bg-color -->
             <a href="#" class="bg-white text-sm text-ageeza-blue font-semibold px-3 py-2 rounded-l-md">Growth
                 Metrics</a>
             <a href="#" class="bg-white text-sm text-ageeza-blue font-semibold px-3 py-2">Revenue Metrics</a>
-            <a href="#" class="text-sm text-white bg-ageeza-blue font-semibold px-3 py-2 rounded-r-md">Usage Metrics</a>
+            <a href="#" class="text-sm text-white bg-ageeza-blue font-semibold px-3 py-2 rounded-r-md">Usage
+                Metrics</a>
         </div>
-        <div class="flex gap-2 items-center">
-            <span
-                class="text-black font-semibold text-sm cursor-pointer rounded hover:bg-gray-400 px-2 py-1">Today</span>
-            <span class="text-gray-700 font-semibold text-sm cursor-pointer rounded hover:bg-gray-400 px-2 py-1">This
-                Week</span>
-            <span class="text-gray-700 font-semibold text-sm cursor-pointer rounded hover:bg-gray-400 px-2 py-1">This
-                Month</span>
-            <span class="text-gray-700 font-semibold text-sm cursor-pointer rounded hover:bg-gray-400 px-2 py-1">Year to
-                date</span>
-            <input type="text" placeholder="From" class="w-32 border-2 cursor-pointer px-2 py-1 rounded focus:outline-none focus:border-ageeza-blue">
-            <input type="text" placeholder="To" class="w-32 border-2 cursor-pointer px-2 py-1 rounded focus:outline-none focus:border-ageeza-blue">
+        <div class="flex justify-between items-center">
+            <div class="hidden md:flex gap-2">
+                <span
+                    class="text-black font-semibold text-sm cursor-pointer rounded hover:bg-gray-400 px-3 py-2">Today</span>
+                <span
+                    class="text-gray-700 font-semibold text-sm cursor-pointer rounded hover:bg-gray-400 px-3 py-2">This
+                    Week</span>
+                <span
+                    class="text-gray-700 font-semibold text-sm cursor-pointer rounded hover:bg-gray-400 px-3 py-2">This
+                    Month</span>
+                <span
+                    class="text-gray-700 font-semibold text-sm cursor-pointer rounded hover:bg-gray-400 px-3 py-2">Year
+                    to
+                    date</span>
+            </div>
+            <div class="flex gap-2">
+                <input type="text" placeholder="From"
+                    class="w-32 border-2 cursor-pointer px-2 py-1 rounded focus:outline-none focus:border-ageeza-blue">
+                <input type="text" placeholder="To"
+                    class="w-32 border-2 cursor-pointer px-2 py-1 rounded focus:outline-none focus:border-ageeza-blue">
+            </div>
+        </div>
+    </div>
+    <!-- Dashboard -->
+    <div class="w-10/12 mx-auto mb-16 flex gap-4">
+        <div class="bg-white px-6 py-3 flex-1 shadow-2xl rounded-lg">
+            <div class="mb-4">
+                <h2 class="mt-6 mb-2 uppercase font-semibold text-gray-900">Totals</h2>
+                <hr>
+            </div>
+            <div class="flex flex-col gap-8 mb-4">
+                <div class="flex gap-4">
+                    <div class="flex-1 px-2 py-1 rounded cursor-pointer hover:bg-gray-100">
+                        <span class="block font-bold text-gray-900 text-2xl">5045</span>
+                        <span class="text-gray-600 text-xs">New users registered</span>
+                    </div>
+                    <div class="flex-1 px-2 py-1 rounded cursor-pointer hover:bg-gray-100">
+                        <span class="block font-bold text-gray-800 text-2xl">6690</span>
+                        <span class="text-gray-600 text-xs">Cumulative users registered</span>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-1 px-2 py-1 rounded cursor-pointer hover:bg-gray-100">
+                        <span class="block font-bold text-gray-800 text-2xl">4600</span>
+                        <span class="text-gray-600 text-xs">Active accounts</span>
+                    </div>
+                    <div class="flex-1 px-2 py-1 rounded cursor-pointer hover:bg-gray-100">
+                        <span class="block font-bold text-gray-800 text-2xl">9462</span>
+                        <span class="text-gray-600 text-xs">Active users</span>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-1 px-2 py-1 rounded cursor-pointer hover:bg-gray-100">
+                        <span class="block font-bold text-gray-800 text-2xl">5045</span>
+                        <span class="text-gray-600 text-xs">Number of logins</span>
+                    </div>
+                    <div class="flex-1 px-2 py-1 rounded cursor-pointer hover:bg-gray-100">
+                        <span class="block font-bold text-gray-800 text-2xl">2</span>
+                        <span class="text-gray-600 text-xs">Number of active countries</span>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-1 px-2 py-1 rounded cursor-pointer hover:bg-gray-100">
+                        <span class="block font-bold text-gray-800 text-2xl">480hrs</span>
+                        <span class="text-gray-600 text-xs">Time spent on system</span>
+                    </div>
+                    <div class="flex-1 px-4 py-2"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h2 class="mt-6 mb-2 uppercase font-semibold text-gray-900">Averages</h2>
+                <hr>
+            </div>
+            <div class="flex gap-4 mb-12">
+                <div class="flex-1 px-2 py-1 rounded cursor-pointer hover:bg-gray-100">
+                    <span class="block font-bold text-gray-800 text-2xl">24hrs</span>
+                    <span class="text-gray-600 text-xs">Order to delivery period</span>
+                </div>
+                <div class="flex-1 px-2 py-1 rounded cursor-pointer hover:bg-gray-100">
+                    <span class="block font-bold text-gray-800 text-2xl">20mins</span>
+                    <span class="text-gray-600 text-xs">Time spent by user in-app</span>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-1.6 flex-col gap-4">
+            <div class="bg-white flex-1 shadow-lg flex items-center justify-center"><span class="text-lg font-bold">Chart 1</span></div>
+            <div class="bg-white flex-1 shadow-lg flex items-center justify-center"><span class="text-lg font-bold">Chart 2</span></div>
+        </div>
 
-        </div>
+    </div>
+
     </div>
 
     </div>
