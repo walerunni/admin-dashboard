@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server",
-    "build": "postcss css/tailwind.css -o public/build/tailwind.css"
+    "start": "npm run build:css && live-server",
+    "build:css": "postcss css/tailwind.css -o public/build/tailwind.css"
   },
   "repository": {
     "type": "git",
